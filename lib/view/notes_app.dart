@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:opp/widget/custom_appBar.dart';
-import 'package:opp/widget/costom_note_item.dart';
+import 'package:opp/widget/notes_list_view.dart';
 
 class NotesApp extends StatelessWidget {
   const NotesApp({super.key});
@@ -12,6 +12,10 @@ class NotesApp extends StatelessWidget {
           preferredSize: Size.fromHeight(40.0), // or any other size you want
           child: CustomAppbar(),
         ),
-        body: NotesItemBady());
+        body: Column(
+          children: [
+            Expanded(child: NotesListViewe()),
+          ],
+        ));
   }
 }
