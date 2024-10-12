@@ -26,7 +26,8 @@ class NotesItemBady extends StatelessWidget {
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.only(
-                  top: 10,
+                  top: 20,
+                  bottom: 20,
                 ),
                 child: Text(
                   'Build your Career with  Mohamed Abdelwhab',
