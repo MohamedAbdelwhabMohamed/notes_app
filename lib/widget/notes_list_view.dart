@@ -7,13 +7,6 @@ class NotesListViewe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blue,
-        onPressed: () {},
-        child: const Icon(
-          Icons.add,
-        ),
-      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 16),
         child: ListView.builder(

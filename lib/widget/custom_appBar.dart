@@ -7,26 +7,38 @@ class CustomAppbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      title: const Text(
-        'Notes',
-        style: TextStyle(color: Colors.white),
-      ),
-      actions: [
-        Container(
+    return Scaffold(
+        body: SafeArea(
+      child: Row(
+        children: [
+          const SizedBox(
+            width: 10,
+          ),
+          const Text('Notes',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              )),
+          const Spacer(),
+          Container(
             margin: const EdgeInsets.only(right: 10),
-            height: 40,
             width: 40,
+            height: 40,
             decoration: BoxDecoration(
-                color: const Color(0xFF3B3B3),
-                borderRadius: BorderRadius.circular(15)),
+              color: const Color(0xFF3B3B3),
+              borderRadius: BorderRadius.circular(10),
+            ),
             child: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.search,
-                  color: Colors.white,
-                )))
-      ],
-    );
+              onPressed: () {},
+              icon: const Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
+      ),
+    ));
   }
 }
