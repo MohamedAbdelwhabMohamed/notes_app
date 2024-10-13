@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:opp/view/notes_view_bady.dart';
+import 'package:opp/view/notes_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       debugShowCheckedModeBanner: false,
-      home: const NotesApp(),
+      home: const NotesView(),
     );
   }
 }

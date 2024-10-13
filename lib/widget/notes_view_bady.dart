@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:opp/widget/custom_appBar.dart';
 import 'package:opp/widget/notes_list_view.dart';
 
-class NotesApp extends StatelessWidget {
-  const NotesApp({super.key});
+class NotesViewBady extends StatelessWidget {
+  const NotesViewBady({super.key});
 
   @override
   Widget build(BuildContext context) {
