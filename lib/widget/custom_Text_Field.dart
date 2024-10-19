@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:opp/helper/costom_color.dart';
 
@@ -14,7 +16,7 @@ class CustomTextField extends StatelessWidget {
         cursorColor: KprimaryColor,
         decoration: InputDecoration(
           hintText: hint,
-          hintStyle: const TextStyle(color: Color(0xff62FCD7)),
+          hintStyle: const TextStyle(color: KprimaryColor),
           border: buildBorder(),
           enabledBorder: buildBorder(),
           focusedBorder: buildBorder(KprimaryColor),
