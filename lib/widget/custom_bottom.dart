@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:opp/helper/costom_color.dart';
 
-class CostomBotom extends StatelessWidget {
-  const CostomBotom({super.key});
+class CustomBotom extends StatelessWidget {
+  const CustomBotom({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,10 +1,10 @@
 // ignore_for_file: use_full_hex_values_for_flutter_colors, file_names
 
 import 'package:flutter/material.dart';
-import 'package:opp/widget/costom_Icon.dart';
+import 'package:opp/widget/custom_Icon.dart';
 
-class CostomAppbar extends StatelessWidget {
-  const CostomAppbar({super.key, required this.title, required this.icon});
+class CustomAppbar extends StatelessWidget {
+  const CustomAppbar({super.key, required this.title, required this.icon});
 
   final String title;
   final IconData icon;
@@ -20,7 +20,7 @@ class CostomAppbar extends StatelessWidget {
               fontSize: 20,
             )),
         const Spacer(),
-        CostomIcon(
+        CustomIcon(
           icon: icon,
         )
       ],

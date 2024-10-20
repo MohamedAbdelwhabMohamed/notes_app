@@ -11,9 +11,9 @@ class NotesViewBady extends StatelessWidget {
         body: Column(
       children: [
         SizedBox(
-          height: 30,
+          height: 50,
         ),
-        CostomAppbar(
+        CustomAppbar(
           icon: Icons.search,
           title: 'Notes',
         ),

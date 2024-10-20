@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opp/widget/custom_Text_Field.dart';
 import 'package:opp/widget/custom_appBar.dart';
 
 class EditNoteViewBady extends StatelessWidget {
@@ -7,17 +8,19 @@ class EditNoteViewBady extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(40.0), // or any other size you want
-        child: CostomAppbar(
-          icon: Icons.check,
-          title: 'Edit Note',
-        ),
-      ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
-          children: [],
+          children: [
+            SizedBox(
+              height: 50,
+            ),
+            CustomAppbar(title: 'Edit Note', icon: Icons.check),
+            SizedBox(height: 50),
+            CustomTextField(hint: 'Title'),
+            SizedBox(height: 16),
+            CustomTextField(hint: 'content', mixLines: 5),
+          ],
         ),
       ),
     );
