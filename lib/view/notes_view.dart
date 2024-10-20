@@ -21,9 +21,9 @@ class NotesView extends StatelessWidget {
           Icons.add,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: const NotesViewBady(),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20),
+        child: NotesViewBady(),
       ),
     );
   }

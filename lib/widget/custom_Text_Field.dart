@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:opp/helper/costom_color.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key, required this.hint, this.mixLines = 1});
+class CostomTextField extends StatelessWidget {
+  const CostomTextField({super.key, required this.hint, this.mixLines = 1});
 
   final String hint;
   final int mixLines;

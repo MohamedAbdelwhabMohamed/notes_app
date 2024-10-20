@@ -10,7 +10,10 @@ class NotesViewBady extends StatelessWidget {
     return const Scaffold(
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(40.0), // or any other size you want
-          child: CustomAppbar(),
+          child: CostomAppbar(
+            icon: Icons.search,
+            title: 'Notes',
+          ),
         ),
         body: Column(
           children: [

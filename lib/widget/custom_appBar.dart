@@ -1,9 +1,13 @@
 // ignore_for_file: use_full_hex_values_for_flutter_colors, file_names
 
 import 'package:flutter/material.dart';
+import 'package:opp/widget/costom_Icon.dart';
 
-class CustomAppbar extends StatelessWidget {
-  const CustomAppbar({super.key});
+class CostomAppbar extends StatelessWidget {
+  const CostomAppbar({super.key, required this.title, required this.icon});
+
+  final String title;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -14,29 +18,16 @@ class CustomAppbar extends StatelessWidget {
           const SizedBox(
             width: 10,
           ),
-          const Text('Notes',
-              style: TextStyle(
+          Text(title,
+              style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
               )),
           const Spacer(),
-          Container(
-            margin: const EdgeInsets.only(right: 10),
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              color: const Color(0xFF3B3B3),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-            ),
-          ),
+          CostomIcon(
+            icon: icon,
+          )
         ],
       ),
     ));
