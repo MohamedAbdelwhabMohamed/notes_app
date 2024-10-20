@@ -8,17 +8,17 @@ class NotesViewBady extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(40.0), // or any other size you want
-          child: CostomAppbar(
-            icon: Icons.search,
-            title: 'Notes',
-          ),
-        ),
         body: Column(
-          children: [
-            Expanded(child: NotesListViewe()),
-          ],
-        ));
+      children: [
+        SizedBox(
+          height: 30,
+        ),
+        CostomAppbar(
+          icon: Icons.search,
+          title: 'Notes',
+        ),
+        Expanded(child: NotesListView()),
+      ],
+    ));
   }
 }

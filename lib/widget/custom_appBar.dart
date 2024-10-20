@@ -11,25 +11,19 @@ class CostomAppbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: SafeArea(
-      child: Row(
-        children: [
-          const SizedBox(
-            width: 10,
-          ),
-          Text(title,
-              style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              )),
-          const Spacer(),
-          CostomIcon(
-            icon: icon,
-          )
-        ],
-      ),
-    ));
+    return Row(
+      children: [
+        Text(title,
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+        const Spacer(),
+        CostomIcon(
+          icon: icon,
+        )
+      ],
+    );
   }
 }

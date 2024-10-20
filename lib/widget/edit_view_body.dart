@@ -11,7 +11,7 @@ class EditNoteViewBady extends StatelessWidget {
         preferredSize: Size.fromHeight(40.0), // or any other size you want
         child: CostomAppbar(
           icon: Icons.check,
-          title: 'Notes',
+          title: 'Edit Note',
         ),
       ),
       body: Padding(
