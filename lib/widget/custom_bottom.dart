@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:opp/helper/costom_color.dart';
+import 'package:opp/helper/costoms.dart';
 
 class CustomBotom extends StatelessWidget {
   const CustomBotom({super.key});
@@ -7,7 +7,7 @@ class CustomBotom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-        color: KprimaryColor,
+        color: kprimaryColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0), // زاوية مستديرة
         ),

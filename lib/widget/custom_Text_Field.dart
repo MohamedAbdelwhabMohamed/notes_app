@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:opp/helper/costom_color.dart';
+import 'package:opp/helper/costoms.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({super.key, required this.hint, this.mixLines = 1});
@@ -13,13 +13,17 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
         maxLines: mixLines,
-        cursorColor: KprimaryColor,
+        cursorColor: kprimaryColor,
         decoration: InputDecoration(
           hintText: hint,
-          hintStyle: const TextStyle(color: KprimaryColor),
+          hintStyle: const TextStyle(
+            color: kprimaryColor,
+          ),
           border: buildBorder(),
           enabledBorder: buildBorder(),
-          focusedBorder: buildBorder(KprimaryColor),
+          focusedBorder: buildBorder(
+            kprimaryColor,
+          ),
         ));
   }
 

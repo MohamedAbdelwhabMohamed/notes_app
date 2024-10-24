@@ -19,7 +19,7 @@ class EditNoteViewBady extends StatelessWidget {
             SizedBox(height: 50),
             CustomTextField(hint: 'Title'),
             SizedBox(height: 16),
-            CustomTextField(hint: 'content', mixLines: 5),
+            CustomTextField(hint: 'Content', mixLines: 5),
           ],
         ),
       ),
