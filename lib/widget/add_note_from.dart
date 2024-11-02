@@ -16,7 +16,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   //التحقق من صحة البيانات المدخلة في النموذج باستخدام AutovalidateMode disabled والتحقق من صحة البيانات المدخلة في النموذج باستخدام AutovalidateMode.onUserInteraction
   AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
-  String? title, content;
+  String? title, subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hint: 'content',
             mixLines: 5,
             onSaved: (value) {
-              content = value;
+              subtitle = value;
             },
           ),
           SizedBox(
@@ -56,7 +56,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                       formKey.currentState!.save();
                       var noteModel = NoteModel(
                           title: title!,
-                          cotent: content!,
+                          subtitle: subtitle!,
                           date: DateTime.now().toString(),
                           color: Colors.blue.value);
                       BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);

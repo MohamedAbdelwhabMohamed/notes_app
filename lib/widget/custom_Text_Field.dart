@@ -16,6 +16,7 @@ class CustomTextField extends StatelessWidget {
     return TextFormField(
         onSaved: onSaved,
         validator: (value) {
+          // شرط التحقق للحقل المطلوب للتعامل معه للمستخدم بشكل صحيح اذا  الحقل فارغ 
           if (value?.isEmpty ?? true) {
             return 'Field is required';
           } else {
