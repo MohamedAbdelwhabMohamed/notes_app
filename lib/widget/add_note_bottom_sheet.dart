@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opp/cubits/netes_cubit/notes_cubit.dart';
 import 'package:opp/widget/add_note_from.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,11 +20,11 @@ class _AddNoteBottomSheetState extends State<AddNoteBottomSheet> {
       child:
           BlocConsumer<AddNoteCubit, AddNoteState>(listener: (context, state) {
         if (state is AddNoteSuccess) {
+          BlocProvider.of<NotesCubit>(context).fetchNotes();
+
           Navigator.pop(context);
         }
-        if (state is AddNoteFailure) {
-          print('Faild ${state.errorMassage}');
-        }
+        if (state is AddNoteFailure) {}
       }, builder: (context, state) {
         return AbsorbPointer(
           absorbing: state is AddNoteLoading ? true : false,

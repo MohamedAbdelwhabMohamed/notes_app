@@ -5,18 +5,24 @@ import 'package:opp/helper/costoms.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
-      {super.key, required this.hint, this.mixLines = 1, this.onSaved});
+      {super.key,
+      required this.hint,
+      this.mixLines = 1,
+      this.onSaved,
+      this.onChanged});
 
   final String hint;
   final int mixLines;
   final void Function(String?)? onSaved;
+  final void Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+        onChanged: onChanged,
         onSaved: onSaved,
         validator: (value) {
-          // شرط التحقق للحقل المطلوب للتعامل معه للمستخدم بشكل صحيح اذا  الحقل فارغ 
+          // شرط التحقق للحقل المطلوب للتعامل معه للمستخدم بشكل صحيح اذا  الحقل فارغ
           if (value?.isEmpty ?? true) {
             return 'Field is required';
           } else {
