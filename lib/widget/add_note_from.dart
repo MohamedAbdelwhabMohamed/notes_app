@@ -49,9 +49,12 @@ class _AddNoteFormState extends State<AddNoteForm> {
             },
           ),
           SizedBox(
-            height: 22,
+            height: 32,
           ),
           ColorItimList(),
+          SizedBox(
+            height: 32,
+          ),
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
               return CustomBotom(
